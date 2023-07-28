@@ -80,6 +80,19 @@ function click_listener(event) {
 
 var clickLocs = [];
 
+var storedText;
+
+fetch('https://fiddle.jshell.net/robots.txt')
+  .then(function(response) {
+    response.text().then(function(text) {
+      storedText = text;
+      done();
+    });
+  });
+
+function done() {
+  alert(storedText);
+}
 
 function render(image) {
   // Get A WebGL context
