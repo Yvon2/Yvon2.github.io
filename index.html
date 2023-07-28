@@ -203,7 +203,7 @@ function render(image) {
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
   // Set a rectangle the same size as the image.
-  setRectangle(gl, 0, 0, image.width, image.height);
+  setRectangle(gl, 0, 0, 125, 125);
 
   // Draw the rectangle.
   var primitiveType = gl.TRIANGLES;
