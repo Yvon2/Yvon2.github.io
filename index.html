@@ -74,7 +74,7 @@ var  canvas = document.querySelector("#c");
 canvas.addEventListener("click", click_listener);
 
 function click_listener(event) {
-  clickLocs.append([event.x, event.y]);
+  clickLocs.push([event.x, event.y]);
   render(image);
 }
 
