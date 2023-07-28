@@ -7,7 +7,7 @@
 <body>
 <canvas id="c" width="500" height="500" display="block"></canvas>
 <script src="https://webgl2fundamentals.org/webgl/resources/webgl-utils.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" id="script">
 "use strict";
 
 var vertexShaderSource = `#version 300 es
@@ -74,8 +74,12 @@ var  canvas = document.querySelector("#c");
 canvas.addEventListener("click", click_listener);
 
 function click_listener(event) {
+  clickLocs.append([event.x, event.y]);
   render(image);
 }
+
+var clickLocs = [];
+
 
 function render(image) {
   // Get A WebGL context
